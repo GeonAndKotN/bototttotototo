@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace bototttotototo.Game
 {
-    public class UserData : Location
+    public class UserData
     {
         public long UserId { get; set; }
         public string Name { get; set; }
@@ -17,6 +17,6 @@ namespace bototttotototo.Game
         public int Level { get; set; } = 1;
         public int PowerPoint { get; set; } = 1;
         public int AgilityPoint { get; set; } = 1;
-        public int ResistanePoint { get; set; } = 1;
+        public int ResistanсePoint { get; set; } = 1;
     }
 }
