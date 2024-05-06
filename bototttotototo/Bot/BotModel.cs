@@ -18,8 +18,6 @@ namespace bototttotototo.Bot
         {
             switch (command)
             {
-
-
                 case BotCommand.Start:
                     OnGameResponse.Invoke(
                 this,
@@ -41,7 +39,7 @@ namespace bototttotototo.Bot
                     {
                         TextMessage = "Приветствую тебя Путник! Выбирай товары на свой вкус и цвет!",
                         ImageUrl = ""//тут я фотку вставлю торговца, уже сделал при помощи ИИ
-                }
+                    }
                 );
                     break;
 
@@ -50,20 +48,9 @@ namespace bototttotototo.Bot
                 this,
                 new GameResponseEventArgs()
                     {
-                        TextMessage = $"Выберите в какое именно подземелье вы бы хотели спуститься",
-                        ImageUrl = "https://sun9-3.userapi.com/impg/c858324/v858324088/1a15f9/d_xygXE_Gh8.jpg?size=807x473&quality=96&sign=bad6e70eb09da92154f8c41bb9f8eadc&c_uniq_tag=IG5xWmb3RF5VYK5GvZrY7YqO_t6HzFwZWlo46cTWrHc&type=album"
-                }
-                );
-                    break;
-
-                case BotCommand.WarSel:
-                    OnGameResponse.Invoke(
-                this,
-                new GameResponseEventArgs()
-                    {
-                        TextMessage = "Вы выбрали класс воина!!!",
-                        ImageUrl = "https://raw.githubusercontent.com/GeonAndKotN/TgBotWithMySqlKAD1125/master/TgBotWithMySqlKAD1125/Image/WarriorImageMale.jpg"
-                }
+                        TextMessage = $"Вы точно хотите спуститься?",
+                        ImageUrl = "https://rgo.ru/upload/s34web.imageadapter/27e5edb13ca5f28ea24a1abe03b4e42b/proba_sifonajpg.jpg"
+                    }
                 );
                     break;
             }
