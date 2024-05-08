@@ -16,7 +16,7 @@ namespace bototttotototo.Game
         public Location Location { get; set; }
         public int Level { get; set; } = 1;
         public int PowerPoint { get; set; } = 1;
-        public int AgilityPoint { get; set; } = 1;
         public int ResistanсePoint { get; set; } = 1;
+        public List<int> Potion { get; set; }
     }
 }

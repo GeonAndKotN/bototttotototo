@@ -9,6 +9,6 @@ namespace bototttotototo.Game
 {
     public static class Math
     {
-        //public static int 
+        //public static int %брони типо такие = (0.06*armor)/(2+0,06*armor)
     }
 }

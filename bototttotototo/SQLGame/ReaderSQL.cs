@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace bototttotototo.SQLGame
 {
-    internal class ReaderSQL
+    public class ReaderSQL
     {
+
     }
 }
