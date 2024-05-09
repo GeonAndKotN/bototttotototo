@@ -15,6 +15,7 @@ namespace bototttotototo.Game
         public int Exp { get; set; } = 0;
         public Location Location { get; set; }
         public int Level { get; set; } = 1;
+        public int AmountPoints { get; set; }
         public int PowerPoint { get; set; } = 1;
         public int ResistanсePoint { get; set; } = 1;
         public List<int> Potion { get; set; }

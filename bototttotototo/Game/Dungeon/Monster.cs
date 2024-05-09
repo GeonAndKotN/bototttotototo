@@ -6,28 +6,45 @@ using System.Threading.Tasks;
 
 namespace bototttotototo.Game.Dungeon
 {
-    public class Monster
+    public class Monster : RoomContent, IActor, IDamageTaker
     {
-        public EventHandler<Monster> OnDied;
-        public EventHandler<Monster> OnAction;
-        public EnemyStats Stats { get; private set; }
+        public event EventHandler OnDied;
+        public event EventHandler OnAction;
+        public event EventHandler<int> OnDamageTaken;
+        public EnemyStats Stats { get; }
+        public int Health { get => Stats.Health; set => Stats.Health = value; }
         public Monster(EnemyStats stats)
         {
             Stats = stats;
         }
 
-        public void TakeDamage()
+        public void TakeDamage(int Value)
         {
-
+            Health -= Value;
+            OnDamageTaken.Invoke(this, Value);
         }
         public void Act()
         {
-            OnAction.Invoke(this, this);
+            OnAction.Invoke(this, new EventArgs());
         }
-
         public void Die()
         {
-            OnDied.Invoke(this, this);
+            OnDied.Invoke(this, new EventArgs());
         }
     }
+    public interface IActor
+    {
+        event EventHandler OnAction;
+        void Act();
+    }
+
+    public interface IDamageTaker
+    {
+        int Health { get; set; }
+        event EventHandler<int> OnDamageTaken;
+        event EventHandler OnDied;
+        void TakeDamage(int value);
+        void Die();
+    }
 }
+
