@@ -9,7 +9,7 @@ namespace bototttotototo.Game.Shop
     public class PotionList
     {
         public string PotName { get; set; }
-        public int PotEffect {  get; set; }
+        public int PotEffect { get; set; }
         public int PotPrice { get; set; }
     }
 }

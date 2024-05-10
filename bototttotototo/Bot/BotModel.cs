@@ -7,6 +7,7 @@ using Telegram.Bot;
 using Telegram.Bot.Types;
 
 namespace bototttotototo.Bot
+    // ЧТО ТО Я ТУПЛЮ И НИХРЕНА НЕ ПОНИМАЮ КАК ТУТ СДЕЛАТЬ ЗАПРОС MYSQL В ПЛАНЕ, В МОЁМ ПРОШЛОМ БОТЕ ВСЁ БЫЛО ПОПРОЩЕ ТАКОЕ ОЩУЩЕНИЕ
 {
     public class BotModel : IGameModel
     {
@@ -64,7 +65,8 @@ namespace bototttotototo.Bot
                 new GameResponseEventArgs()
                 {
                     TextMessage = $"Вы точно хотите спуститься?",
-                    ImageUrl = "https://rgo.ru/upload/s34web.imageadapter/27e5edb13ca5f28ea24a1abe03b4e42b/proba_sifonajpg.jpg"
+                    ImageUrl = "https://rgo.ru/upload/s34web.imageadapter/27e5edb13ca5f28ea24a1abe03b4e42b/proba_sifonajpg.jpg",
+                    CommandSQL = "SELECT user_id FROM Users WHERE user_id = @Id"
                 }
             );
         }
@@ -75,6 +77,7 @@ namespace bototttotototo.Bot
     {
         public string TextMessage { get; set; }
         public string ImageUrl { get; set; }
+        public string CommandSQL { get; set; }
     }
 
     public interface IGameModel 

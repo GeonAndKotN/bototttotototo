@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,9 @@ namespace bototttotototo.Bot
             gameView.commandRecieved += gameModel.HandleCommand;
             gameModel.OnGameResponse += (s, a) => gameView.SendMessage(botclient, a);
             Console.WriteLine("Бот был запущен!");
+
+            string SQLConnection = "server=localhost;user=SuperKAD;database=bototttotototo;password=1234;";
+            MySqlConnection SQLConn = new MySqlConnection(SQLConnection);
 
             Console.ReadLine();
         }
